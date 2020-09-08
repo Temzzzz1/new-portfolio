@@ -1,100 +1,123 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
 
-            .full-height {
-                height: 100vh;
-            }
+@section('title-block')
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+    Rusanov | Home
 
-            .position-ref {
-                position: relative;
-            }
+@endsection
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
 
-            .content {
-                text-align: center;
-            }
+@section('content')
 
-            .title {
-                font-size: 84px;
-            }
+    <div id="fh5co-main">
+        <aside id="fh5co-hero" class="js-fullheight">
+            <div class="flexslider js-fullheight">
+                <ul class="slides">
+                    <li style="background-image: url(images/img_bg_1.jpg);">
+                        <div class="overlay"></div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
+                                    <div class="slider-text-inner">
+                                        <h1>Back-end developer, <strong></strong> guitar player<br> and parrot lover</h1>
+                                        <h2>My name is Artiom Rusanov and I am developer from Russia</h2>
+                                        <p>
+                                            <a class="btn btn-primary btn-demo popup-vimeo" href="https://github.com/Temzzzz1"> <i class="icon-github"></i> Github</a>
+                                            <a class="btn btn-primary btn-learn" href="/contact">Contact me</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
+                </ul>
+            </div>
+        </aside>
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
+        <div class="fh5co-narrow-content">
+            <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Services</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+                        <div class="fh5co-icon">
+                            <i class="icon-settings"></i>
+                        </div>
+                        <div class="fh5co-text">
+                            <h3>Versatile</h3>
+                            <p>-dawdawdawdaw</p>
+                        </div>
+                    </div>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="col-md-6">
+                    <div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+                        <div class="fh5co-icon">
+                            <i class="icon-search4"></i>
+                        </div>
+                        <div class="fh5co-text">
+                            <h3>Exploping</h3>
+                            <p>awdawdaw</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="col-md-6">
+                    <div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+                        <div class="fh5co-icon">
+                            <i class="icon-paperplane"></i>
+                        </div>
+                        <div class="fh5co-text">
+                            <h3>Purposeful</h3>
+                            <p> I set myself big goals, I started learning programming even before entering the university. I started with bots in discord, studying Javascript. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+                        <div class="fh5co-icon">
+                            <i class="icon-params"></i>
+                        </div>
+                        <div class="fh5co-text">
+                            <h3>Versatile</h3>
+                            <p>Coding for me is one of the most important parts in life. I am also interested in design, working in Figma.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+
+        <div class="fh5co-narrow-content">
+            <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Recent Blog</h2>
+            <div class="row row-bottom-padded-md">
+
+                @foreach($blog as $el)
+
+                    <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+                        <div class="blog-entry">
+                            <a href="#" class="blog-img"><img src="{{ $el['url'] }}" class="img-responsive"></a>
+                            <div class="desc">
+                                <h3><a href="#">{{ $el['title'] }}</a></h3>
+                                <span><small>by {{ $el['author'] }} </small> / <small> {{ $el['genre'] }} </small> / <small> <i class="icon-comment"></i> 14</small></span>
+                                <p>{{ $el['description'] }}</p>
+
+                                {{--<i class="icon-arrow-right3"></i>--}}
+                                <a href="{{ route('post', $el->id)}}" class="lead">Read More <i class="icon-arrow-right3"></i></a>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                @endforeach
+
+            </div>
+        </div>
+
+
+    </div>
+
+@endsection
